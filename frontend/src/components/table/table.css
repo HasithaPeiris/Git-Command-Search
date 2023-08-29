@@ -1,0 +1,21 @@
+.table-wrapper{
+    margin-top: 50px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #333;
+    border-radius: 10px; /* Add border radius */
+    overflow: hidden; /* To hide the overflow from border radius */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+  
+th {
+    background-color: #f2f2f2;
+}

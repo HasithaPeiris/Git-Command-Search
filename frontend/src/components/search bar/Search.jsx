@@ -1,11 +1,18 @@
 import React, { useState } from 'react'
 import "./search.css"
 import { Commands } from '../../commands'
+import Table from '../table/Table';
 
 export default function Search() {
     const [query, setQuery] = useState("");
 
-    console.log(Commands.filter(command=>command.command.toLowerCase().includes("clo")));
+    const keys = ["command", "desc"]
+
+    const search = (data) => {
+        return data.filter(
+            (item)=>keys.some(key=>item[key].toLowerCase().includes(query))
+        );
+    }
   return (
     <div className='search-wrapper'>
         <div className="search-box">
@@ -15,11 +22,8 @@ export default function Search() {
                 className='search'
                 onChange={e => setQuery(e.target.value)}
             />
-            <ul className="list">
-                {Commands.filter(command=>command.command.toLowerCase().includes(query)).map(command=>(
-                    <li key={command.id} className="list-item">{command.command}</li>
-                ))}
-            </ul>
+            
+            <Table data={search(Commands)}/>
         </div>
     </div>
   )
