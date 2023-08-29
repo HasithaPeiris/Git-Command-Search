@@ -1,0 +1,30 @@
+.search-wrapper{
+    margin: 100px;
+}
+
+.search-box{
+    width: 50%;
+    margin: auto;
+}
+
+.search{
+    border: 1px solid #e2e2e2;
+    background-color: transparent;
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 100px;
+}
+
+.list{
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.list-item{
+    margin-bottom: 20px;
+    font-size: 25px;
+    color: #444;
+    font-weight: 300;
+}
